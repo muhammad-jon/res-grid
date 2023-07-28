@@ -1,0 +1,64 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.cards > div {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+.card {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid red;
+  background-color: aqua;
+}
+.card > div:nth-child(2) {
+  padding: 1rem;
+}
+.card div img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1216px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+  .card {
+    background-color: violet;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    background-color: green;
+  }
+}
+@media screen and (max-width: 760px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    background-color: orange;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cards {
+    grid-gap: 10px;
+  }
+  .card {
+    border-radius: 0px;
+    background-color: red;
+  }
+}
